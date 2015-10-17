@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a800a88b0c7f43052d818e87432a14ee",
-    "content-hash": "e7457606de78d618799b2ccafadf46c0",
+    "hash": "b0ad3a5f24829b8f9c24ab5b28b3ee48",
+    "content-hash": "b2f867588505917c20d7767b18c64a16",
     "packages": [],
     "packages-dev": [
         {
@@ -700,16 +700,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.13",
+            "version": "4.8.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "be067d6105286b74272facefc2697038f8807b77"
+                "reference": "b4900675926860bef091644849305399b986efa2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/be067d6105286b74272facefc2697038f8807b77",
-                "reference": "be067d6105286b74272facefc2697038f8807b77",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b4900675926860bef091644849305399b986efa2",
+                "reference": "b4900675926860bef091644849305399b986efa2",
                 "shasum": ""
             },
             "require": {
@@ -768,7 +768,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-10-14 13:49:40"
+            "time": "2015-10-17 15:03:30"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -871,6 +871,38 @@
                 "dependency injection"
             ],
             "time": "2015-09-11 15:10:35"
+        },
+        {
+            "name": "qa-tools/phpunit-extension",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/qa-tools/phpunit-extension.git",
+                "reference": "5ccccba9045bf2b83dd8b5d75f8d2db6c7252bb2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/qa-tools/phpunit-extension/zipball/5ccccba9045bf2b83dd8b5d75f8d2db6c7252bb2",
+                "reference": "5ccccba9045bf2b83dd8b5d75f8d2db6c7252bb2",
+                "shasum": ""
+            },
+            "require": {
+                "aik099/phpunit-mink": "^2.1",
+                "qa-tools/qa-tools": "^1.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Obuhovich",
+                    "email": "aik.bold@gmail.com"
+                }
+            ],
+            "description": "QA-Tools extension for PHPUnit",
+            "time": "2015-10-17 20:55:48"
         },
         {
             "name": "qa-tools/qa-tools",
@@ -1479,7 +1511,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "qa-tools/phpunit-extension": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

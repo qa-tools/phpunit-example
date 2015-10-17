@@ -6,7 +6,7 @@ namespace tests\PageObject;
 use QATools\QATools\PageObject\IPageFactory;
 use QATools\QATools\PageObject\PageFactory;
 
-abstract class AbstractQAToolsTestCase extends \tests\AbstractQAToolsTestCase
+abstract class AbstractQAToolsTestCase extends \QATools\PHPUnitExtension\AbstractQAToolsTestCase
 {
 
 	/**

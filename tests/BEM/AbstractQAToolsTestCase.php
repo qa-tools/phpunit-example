@@ -6,7 +6,7 @@ namespace tests\BEM;
 use QATools\QATools\BEM\BEMPageFactory;
 use QATools\QATools\PageObject\IPageFactory;
 
-abstract class AbstractQAToolsTestCase extends \tests\AbstractQAToolsTestCase
+abstract class AbstractQAToolsTestCase extends \QATools\PHPUnitExtension\AbstractQAToolsTestCase
 {
 
 	/**

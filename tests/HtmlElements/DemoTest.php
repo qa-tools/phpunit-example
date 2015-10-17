@@ -3,7 +3,7 @@
 namespace tests\HtmlElements;
 
 
-use tests\AbstractQAToolsTestCase;
+use QATools\PHPUnitExtension\AbstractQAToolsTestCase;
 use tests\HtmlElements\pages\HomePage;
 
 class DemoTest extends AbstractQAToolsTestCase
