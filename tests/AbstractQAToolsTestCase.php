@@ -49,7 +49,7 @@ abstract class AbstractQAToolsTestCase extends BrowserTestCase
 	 */
 	public function getBrowserAliases()
 	{
-		if ( !array_key_exists('WEB_FIXTURE_HOST', $_SERVER) || !array_key_exists('WEB_FIXTURE_URL', $_SERVER) ) {
+		if ( !array_key_exists('BROWSER_HOST', $_SERVER) || !array_key_exists('BROWSER_URL', $_SERVER) ) {
 			throw new \LogicException(
 				'Please define "WEB_FIXTURE_HOST" and "WEB_FIXTURE_URL" in your "phpunit.xml" file.'
 			);
@@ -58,10 +58,10 @@ abstract class AbstractQAToolsTestCase extends BrowserTestCase
 		return array(
 			'default' => array(
 				'driver' => 'selenium2',
-				'host' => $_SERVER['WEB_FIXTURE_HOST'],
+				'host' => $_SERVER['BROWSER_HOST'],
 				'port' => 4444,
 				'browserName' => 'firefox',
-				'baseUrl' => $_SERVER['WEB_FIXTURE_URL'],
+				'baseUrl' => $_SERVER['BROWSER_URL'],
 			),
 		);
 	}

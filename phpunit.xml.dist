@@ -12,8 +12,8 @@
 	</testsuites>
 
 	<php>
-		<server name="WEB_FIXTURE_HOST" value="localhost"/>
-		<server name="WEB_FIXTURE_URL" value="http://localhost/phpunit-example/public"/>
+		<server name="BROWSER_HOST" value="localhost"/>
+		<server name="BROWSER_URL" value="http://localhost/phpunit-example/public"/>
 	</php>
 
 	<filter>
