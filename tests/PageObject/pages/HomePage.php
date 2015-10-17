@@ -36,13 +36,29 @@ class HomePage extends Page {
 	public function setUsername($username)
 	{
 		$this->inputByName->setValue($username);
-		$this->selectByTagName->setValue('EUR');
-
-		$this->inputByName->setValue('another user');
-
-		// Need `getObject` to iterate over current collection in proxy and not a list of collection.
-		foreach ( $this->selectCollection->getObject() as $select ) {
-			$select->selectOption(/* ... */);
-		}
 	}
+
+	/**
+	 * Changes currency.
+	 *
+	 * @param string $currency_code Currency code.
+	 *
+	 * @return void
+	 */
+	public function changeCurrency($currency_code)
+	{
+		$this->selectByTagName->setValue($currency_code);
+	}
+
+	/**
+	 * Returns SELECT element collection.
+	 *
+	 * @return WebElementCollection
+	 */
+	public function getSelectCollection()
+	{
+		// Need `getObject` to iterate over current collection in proxy and not a list of collection.
+		return $this->selectCollection->getObject();
+	}
+
 }

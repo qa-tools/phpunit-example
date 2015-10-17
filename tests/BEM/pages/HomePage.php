@@ -26,9 +26,17 @@ class HomePage extends BEMPage {
 	 */
 	protected $myTest = '';
 
-	public function examplePageMethod()
+	/**
+	 * Performs login using elements from sidebox.
+	 *
+	 * @param string $username Username.
+	 * @param string $password Password.
+	 *
+	 * @return string
+	 */
+	public function loginViaSandbox($username, $password)
 	{
-		// html block login
-		$error_message = $this->loginSidebox->login('user-b', 'password-b')->getLoginErrorMessage();
+		return $this->loginSidebox->login($username, $password)->getLoginErrorMessage();
 	}
+
 }
