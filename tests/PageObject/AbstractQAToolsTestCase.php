@@ -10,11 +10,11 @@ abstract class AbstractQAToolsTestCase extends \tests\AbstractQAToolsTestCase
 {
 
 	/**
-	 * Returns page factory.
+	 * Creates page factory.
 	 *
 	 * @return IPageFactory
 	 */
-	protected function getPageFactory()
+	protected function createPageFactory()
 	{
 		return new PageFactory($this->getSession(), $this->getPageFactoryConfig());
 	}

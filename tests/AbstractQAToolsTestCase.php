@@ -18,11 +18,25 @@ abstract class AbstractQAToolsTestCase extends BrowserTestCase
 	);
 
 	/**
-	 * Returns page factory.
+	 * Page factory.
+	 *
+	 * @var IPageFactory
+	 */
+	protected $pageFactory;
+
+	protected function setUp()
+	{
+		$this->pageFactory = $this->createPageFactory();
+
+		parent::setUp();
+	}
+
+	/**
+	 * Creates page factory.
 	 *
 	 * @return IPageFactory
 	 */
-	protected function getPageFactory()
+	protected function createPageFactory()
 	{
 		return new TypifiedPageFactory($this->getSession(), $this->getPageFactoryConfig());
 	}
