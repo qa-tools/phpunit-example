@@ -4,10 +4,11 @@ namespace tests;
 
 
 use aik099\PHPUnit\BrowserTestCase;
+use QATools\QATools\HtmlElements\TypifiedPageFactory;
 use QATools\QATools\PageObject\Config\Config;
 use QATools\QATools\PageObject\IPageFactory;
 
-abstract class AbstractBrowserTestCase extends BrowserTestCase
+abstract class AbstractQAToolsTestCase extends BrowserTestCase
 {
 
 	public static $browsers = array(
@@ -21,7 +22,10 @@ abstract class AbstractBrowserTestCase extends BrowserTestCase
 	 *
 	 * @return IPageFactory
 	 */
-	abstract protected function getPageFactory();
+	protected function getPageFactory()
+	{
+		return new TypifiedPageFactory($this->getSession(), $this->getPageFactoryConfig());
+	}
 
 	/**
 	 * Returns config object to be used during PageFactory initialization.
