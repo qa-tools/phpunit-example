@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+	bootstrap="vendor/autoload.php"
+	colors="true"
+	strict="true"
+	verbose="true">
+
+	<testsuites>
+		<testsuite name="Everything">
+			<directory>tests</directory>
+		</testsuite>
+	</testsuites>
+
+	<php>
+		<server name="WEB_FIXTURE_HOST" value="localhost"/>
+		<server name="WEB_FIXTURE_URL" value="http://localhost/phpunit-example/public"/>
+	</php>
+
+	<filter>
+		<whitelist>
+			<directory>public</directory>
+		</whitelist>
+	</filter>
+</phpunit>

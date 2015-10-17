@@ -1,0 +1,21 @@
+{
+    "name": "qa-tools/phpunit-example",
+    "description": "QA-Tools usage example in PHPUnit test cases",
+    "require-dev": {
+        "qa-tools/qa-tools": "^1.0",
+        "phpunit/phpunit": "^4.0",
+        "aik099/phpunit-mink": "^2.1"
+    },
+    "license": "BSD 3-Clause",
+    "authors": [
+        {
+            "name": "Alexander Obuhovich",
+            "email": "aik.bold@gmail.com"
+        }
+    ],
+	"autoload-dev": {
+		"psr-4": {
+			"tests\\": "tests/"
+		}
+	}
+}
