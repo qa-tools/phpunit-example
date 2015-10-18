@@ -7,7 +7,7 @@ use QATools\QATools\BEM\BEMPage;
 use QATools\QATools\BEM\Element\Element;
 
 /**
- * @page-url('http://www.in-portal.com/index.html')
+ * @page-url('/BEM/')
  */
 class HomePage extends BEMPage {
 
