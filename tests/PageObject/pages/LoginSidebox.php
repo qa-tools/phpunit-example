@@ -57,4 +57,5 @@ class LoginSidebox extends AbstractElementContainer {
 	{
 		return $this->loginErrorMessage->getText();
 	}
+
 }

@@ -36,4 +36,5 @@ class DemoTest extends AbstractQAToolsTestCase
 
 		$name2 = $homePage->getOverrideElementName();
 	}
+
 }

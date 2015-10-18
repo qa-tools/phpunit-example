@@ -29,4 +29,5 @@ class Sidebar extends AbstractElementContainer {
 	{
 		return $this->loginSidebox->login($username, $password)->getLoginErrorMessage();
 	}
+
 }

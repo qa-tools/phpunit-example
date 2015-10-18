@@ -15,4 +15,5 @@ class DemoTest extends AbstractQAToolsTestCase
 
 		$errorMessage = $homePage->loginViaSandbox('user-a', 'password-a');
 	}
+
 }

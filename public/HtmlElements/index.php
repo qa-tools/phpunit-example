@@ -54,6 +54,18 @@
 						</select>
 					</div>
 				</div>
+
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Rating</label>
+
+						<input type="radio" name="rating" value="1" id="rating_1"/><label for="rating_1">One</label>
+						<input type="radio" name="rating" value="2" id="rating_2"/><label for="rating_2">Two</label>
+						<input type="radio" name="rating" value="3" id="rating_3"/><label for="rating_3">Three</label>
+						<input type="radio" name="rating" value="4" id="rating_4"/><label for="rating_4">Four</label>
+						<input type="radio" name="rating" value="5" id="rating_5"/><label for="rating_5">Five</label>
+					</div>
+				</div>
 			</div>
 		</div>
 

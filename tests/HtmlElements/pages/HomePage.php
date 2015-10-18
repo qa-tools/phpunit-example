@@ -32,7 +32,7 @@ class HomePage extends TypifiedPage {
 	/**
 	 *
 	 * @var RadioGroup
-	 * @find-by('css' => 'input[name="radio-name"][type="radio"]')
+	 * @find-by('css' => 'input[name="rating"][type="radio"]')
 	 * @element-name('Custom Element Name')
 	 */
 	protected $radioGroup;

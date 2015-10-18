@@ -18,7 +18,8 @@ class DemoTest extends AbstractQAToolsTestCase
 		$homePage->changeCurrency('EUR');
 
 		foreach ( $homePage->getSelectCollection() as $select ) {
-			$select->selectOption(/* ... */);
+			$select->selectOption('');
 		}
 	}
+
 }
