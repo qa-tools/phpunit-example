@@ -15,7 +15,7 @@ class HomePage extends BEMPage {
 	 * Login Sidebox
 	 *
 	 * @var LoginSidebox
-	 * @bem('block' => 'b-login', 'modifier' => array('location' => 'sidebar'))
+	 * @bem('block' => 'b-login', 'modificator' => array('location' => 'sidebar'))
 	 */
 	protected $loginSidebox;
 

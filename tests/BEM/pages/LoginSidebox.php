@@ -19,7 +19,7 @@ class LoginSidebox extends Block {
 
 	/**
 	 * @var Element
-	 * @bem('element' => 'input-password', 'modifier' => array('color' => 'red'))
+	 * @bem('element' => 'input-password', 'modificator' => array('color' => 'red'))
 	 */
 	protected $password;
 
