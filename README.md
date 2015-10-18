@@ -21,12 +21,14 @@ Feel free to ask any questions and share your experiences in the [Chat Room](htt
 3. execute this command to install dependencies: `php composer.phar install`
 4. confirm, that Example Application in `public` folder can be opened by going to the [http://localhost/phpunit-example/public/](http://localhost/phpunit-example/public/) url (replace `localhost` with your domain)
 
-
 ## Requirements
 
 * [Java](https://java.com/download/)
 * [Composer](https://getcomposer.org/download/)
 
+## Contributing
+
+See [CONTRIBUTING](CONTRIBUTING.md) file.
 
 ## License
 

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b0ad3a5f24829b8f9c24ab5b28b3ee48",
-    "content-hash": "b2f867588505917c20d7767b18c64a16",
+    "hash": "ca8d439844b536e9b42b7f6f54401ae7",
+    "content-hash": "f640bb4c0b2234b3bc68c3ffcc4adc8f",
     "packages": [],
     "packages-dev": [
         {
@@ -878,19 +878,27 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/qa-tools/phpunit-extension.git",
-                "reference": "5ccccba9045bf2b83dd8b5d75f8d2db6c7252bb2"
+                "reference": "d5deb1942cda29662f7eac88e8a44d72f875937a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/qa-tools/phpunit-extension/zipball/5ccccba9045bf2b83dd8b5d75f8d2db6c7252bb2",
-                "reference": "5ccccba9045bf2b83dd8b5d75f8d2db6c7252bb2",
+                "url": "https://api.github.com/repos/qa-tools/phpunit-extension/zipball/d5deb1942cda29662f7eac88e8a44d72f875937a",
+                "reference": "d5deb1942cda29662f7eac88e8a44d72f875937a",
                 "shasum": ""
             },
             "require": {
                 "aik099/phpunit-mink": "^2.1",
                 "qa-tools/qa-tools": "^1.0"
             },
+            "require-dev": {
+                "aik099/coding-standard": "dev-master"
+            },
             "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "QATools\\PHPUnitExtension\\": "src/QATools/PHPUnitExtension/"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
@@ -902,25 +910,25 @@
                 }
             ],
             "description": "QA-Tools extension for PHPUnit",
-            "time": "2015-10-17 20:55:48"
+            "time": "2015-10-18 11:03:00"
         },
         {
             "name": "qa-tools/qa-tools",
-            "version": "v1.0.1",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/qa-tools/qa-tools.git",
-                "reference": "5456f64af5b94c5655f21a592b8817690c2096c7"
+                "reference": "c7566b420cbc06024021629b05f163386f160722"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/qa-tools/qa-tools/zipball/5456f64af5b94c5655f21a592b8817690c2096c7",
-                "reference": "5456f64af5b94c5655f21a592b8817690c2096c7",
+                "url": "https://api.github.com/repos/qa-tools/qa-tools/zipball/c7566b420cbc06024021629b05f163386f160722",
+                "reference": "c7566b420cbc06024021629b05f163386f160722",
                 "shasum": ""
             },
             "require": {
                 "behat/mink": "~1.6",
-                "mindplay/annotations": "~1.2@dev",
+                "mindplay/annotations": "~1.2",
                 "php": ">=5.3.2"
             },
             "replace": {
@@ -928,8 +936,7 @@
             },
             "require-dev": {
                 "aik099/coding-standard": "dev-master",
-                "behat/mink-selenium2-driver": "~1.2@dev",
-                "brianium/paratest": "~0.7",
+                "behat/mink-selenium2-driver": "~1.2",
                 "mockery/mockery": "~0.9"
             },
             "suggest": {
@@ -938,7 +945,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.0.x-dev",
+                    "dev-develop": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -975,7 +983,7 @@
                 "phpunit",
                 "tests"
             ],
-            "time": "2014-09-26 15:15:51"
+            "time": "2015-10-18 10:54:10"
         },
         {
             "name": "sebastian/comparator",
@@ -1512,6 +1520,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "qa-tools/qa-tools": 20,
         "qa-tools/phpunit-extension": 20
     },
     "prefer-stable": false,
