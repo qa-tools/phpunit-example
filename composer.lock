@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3de853c7060d18d3312a0527aebae1e5",
-    "content-hash": "afaa3d48bf58c4dbe2c2cf172a9c5d73",
+    "hash": "b449fe28e0a54b6896e3813bbc475947",
+    "content-hash": "3fdf45d6dfe5726dd782e760a39db037",
     "packages": [],
     "packages-dev": [
         {
@@ -14,12 +14,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/minkphp/phpunit-mink.git",
-                "reference": "7cd6f49852b405ec6145651bcf3a83e7af74d79e"
+                "reference": "d8cf119a07cdf8fa583ed98a32144b0f682b6947"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/phpunit-mink/zipball/7cd6f49852b405ec6145651bcf3a83e7af74d79e",
-                "reference": "7cd6f49852b405ec6145651bcf3a83e7af74d79e",
+                "url": "https://api.github.com/repos/minkphp/phpunit-mink/zipball/d8cf119a07cdf8fa583ed98a32144b0f682b6947",
+                "reference": "d8cf119a07cdf8fa583ed98a32144b0f682b6947",
                 "shasum": ""
             },
             "require": {
@@ -66,7 +66,7 @@
                 "selenium",
                 "tests"
             ],
-            "time": "2015-10-18 18:44:59"
+            "time": "2015-10-20 15:17:47"
         },
         {
             "name": "behat/mink",
@@ -700,16 +700,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.14",
+            "version": "4.8.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "b4900675926860bef091644849305399b986efa2"
+                "reference": "625f8c345606ed0f3a141dfb88f4116f0e22978e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b4900675926860bef091644849305399b986efa2",
-                "reference": "b4900675926860bef091644849305399b986efa2",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/625f8c345606ed0f3a141dfb88f4116f0e22978e",
+                "reference": "625f8c345606ed0f3a141dfb88f4116f0e22978e",
                 "shasum": ""
             },
             "require": {
@@ -768,7 +768,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-10-17 15:03:30"
+            "time": "2015-10-23 06:48:33"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -914,16 +914,16 @@
         },
         {
             "name": "qa-tools/qa-tools",
-            "version": "dev-develop",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/qa-tools/qa-tools.git",
-                "reference": "b9419214aca109587e670fdea5776ad74a415406"
+                "reference": "34cfac602493db51c8c63cd7a5ac2a5407d5d255"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/qa-tools/qa-tools/zipball/b9419214aca109587e670fdea5776ad74a415406",
-                "reference": "b9419214aca109587e670fdea5776ad74a415406",
+                "url": "https://api.github.com/repos/qa-tools/qa-tools/zipball/34cfac602493db51c8c63cd7a5ac2a5407d5d255",
+                "reference": "34cfac602493db51c8c63cd7a5ac2a5407d5d255",
                 "shasum": ""
             },
             "require": {
@@ -983,7 +983,7 @@
                 "phpunit",
                 "tests"
             ],
-            "time": "2015-10-18 16:38:07"
+            "time": "2015-10-24 13:25:07"
         },
         {
             "name": "sebastian/comparator",
@@ -1358,23 +1358,20 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v2.7.5",
+            "version": "v2.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "abe19cc0429a06be0c133056d1f9859854860970"
+                "reference": "e1b865b26be4a56d22a8dee398375044a80c865b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/abe19cc0429a06be0c133056d1f9859854860970",
-                "reference": "abe19cc0429a06be0c133056d1f9859854860970",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/e1b865b26be4a56d22a8dee398375044a80c865b",
+                "reference": "e1b865b26be4a56d22a8dee398375044a80c865b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9"
-            },
-            "require-dev": {
-                "symfony/phpunit-bridge": "~2.7"
             },
             "type": "library",
             "extra": {
@@ -1407,20 +1404,20 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "time": "2015-09-22 13:49:29"
+            "time": "2015-10-11 09:39:48"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.7.5",
+            "version": "v2.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "ae4dcc2a8d3de98bd794167a3ccda1311597c5d9"
+                "reference": "87a5db5ea887763fa3a31a5471b512ff1596d9b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/ae4dcc2a8d3de98bd794167a3ccda1311597c5d9",
-                "reference": "ae4dcc2a8d3de98bd794167a3ccda1311597c5d9",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/87a5db5ea887763fa3a31a5471b512ff1596d9b8",
+                "reference": "87a5db5ea887763fa3a31a5471b512ff1596d9b8",
                 "shasum": ""
             },
             "require": {
@@ -1431,7 +1428,6 @@
                 "symfony/config": "~2.0,>=2.0.5",
                 "symfony/dependency-injection": "~2.6",
                 "symfony/expression-language": "~2.6",
-                "symfony/phpunit-bridge": "~2.7",
                 "symfony/stopwatch": "~2.3"
             },
             "suggest": {
@@ -1465,27 +1461,24 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2015-09-22 13:49:29"
+            "time": "2015-10-11 09:39:48"
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.7.5",
+            "version": "v2.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "31cb2ad0155c95b88ee55fe12bc7ff92232c1770"
+                "reference": "eca9019c88fbe250164affd107bc8057771f3f4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/31cb2ad0155c95b88ee55fe12bc7ff92232c1770",
-                "reference": "31cb2ad0155c95b88ee55fe12bc7ff92232c1770",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/eca9019c88fbe250164affd107bc8057771f3f4d",
+                "reference": "eca9019c88fbe250164affd107bc8057771f3f4d",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9"
-            },
-            "require-dev": {
-                "symfony/phpunit-bridge": "~2.7"
             },
             "type": "library",
             "extra": {
@@ -1514,13 +1507,12 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-09-14 14:14:09"
+            "time": "2015-10-11 09:39:48"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "qa-tools/qa-tools": 20,
         "aik099/phpunit-mink": 20
     },
     "prefer-stable": false,
