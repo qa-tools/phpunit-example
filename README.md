@@ -19,7 +19,7 @@ Feel free to ask any questions and share your experiences in the [Chat Room](htt
 1. download "Selenium Standalone Server" from [http://www.seleniumhq.org/download/](http://www.seleniumhq.org/download/) url
 2. clone this repository into `phpunit-example` sub-folder in the DocumentRoot of your Web Server
 3. execute this command to install dependencies: `php composer.phar install`
-4. confirm, that Example Application in `public` folder can be opened by going to the [http://localhost/phpunit-example/public/](http://localhost/phpunit-example/public/) url (replace `localhost` with your domain)
+4. confirm, that Example Application in `web` folder can be opened by going to the [http://localhost/phpunit-example/web/](http://localhost/phpunit-example/web/) url (replace `localhost` with your domain)
 
 ## Requirements
 

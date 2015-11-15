@@ -1,0 +1,29 @@
+{% extends "BEM/designs/inside_design.twig" %}
+
+{% block page_title %}BEM Example{% endblock %}
+
+{% block inside_content %}
+	<div class="large-8 columns b-header">
+		<div class="row">
+			<div class="large-4 columns">
+				&nbsp;
+			</div>
+
+			<div class="large-4 columns">
+				<label>Language:</label>
+				<select name="b-header__language">
+					<option value="1">English</option>
+					<option value="2">Russian</option>
+				</select>
+			</div>
+
+			<div class="large-4 columns">
+				<label>Currency:</label>
+				<select name="b-header__curr-iso">
+					<option value="USD">USD</option>
+					<option value="EUR">EUR</option>
+				</select>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -8,7 +8,7 @@
 
 	<php>
 		<server name="BROWSER_HOST" value="localhost"/>
-		<server name="BROWSER_URL" value="http://localhost/phpunit-example/public"/>
+		<server name="BROWSER_URL" value="http://localhost/phpunit-example/web"/>
 	</php>
 
 	<filter>

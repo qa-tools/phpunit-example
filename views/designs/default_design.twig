@@ -1,0 +1,25 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Example Application | QA-Tools</title>
+		<link rel="stylesheet" href="{{ app.asset_path }}/css/foundation.min.css"/>
+		<script src="{{ app.asset_path }}/js/vendor/modernizr.js"></script>
+	</head>
+	<body>
+		<div class="row">
+			<div class="large-12 columns">
+				<h1>{% block page_title %}{% endblock %}</h1>
+			</div>
+		</div>
+
+		{% block content %}{% endblock %}
+
+		<script src="{{ app.asset_path }}/js/vendor/jquery.js"></script>
+		<script src="{{ app.asset_path }}/js/foundation.min.js"></script>
+		<script>
+			$(document).foundation();
+		</script>
+	</body>
+</html>

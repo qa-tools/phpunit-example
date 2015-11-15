@@ -1,13 +1,25 @@
 {
     "name": "qa-tools/phpunit-example",
     "description": "QA-Tools usage example in PHPUnit test cases",
+	"require": {
+		"php": ">=5.3.9",
+        "silex/silex": "^1.3",
+        "twig/twig": "^1.23",
+        "symfony/twig-bridge": "^2.7"
+	},
     "require-dev": {
 		"phpunit/phpunit": "^4.0",
         "behat/mink-selenium2-driver": "^1.3",
 		"qa-tools/phpunit-extension": "^1.0",
 		"qa-tools/qa-tools": "^1.0",
-		"aik099/phpunit-mink": "^2.1@dev"
+		"aik099/phpunit-mink": "dev-21-remove-dependency-on-pimple as 2.1"
 	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/aik099/phpunit-mink"
+		}
+	],
     "license": "BSD-3-Clause",
     "authors": [
         {

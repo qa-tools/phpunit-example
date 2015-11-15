@@ -1,0 +1,21 @@
+{% extends "designs/default_design.twig" %}
+
+{% block page_title %}QA-Tools Example Application{% endblock %}
+
+{% block content %}
+	<div class="row">
+		<div class="large-12 columns">
+			<ul>
+				<li>
+					<a href="{{ path('PageObject.index') }}">PageObject Example</a>
+				</li>
+				<li>
+					<a href="{{ path('HtmlElements.index') }}">HtmlElements Example</a>
+				</li>
+				<li>
+					<a href="{{ path('BEM.index') }}">BEM Example</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
