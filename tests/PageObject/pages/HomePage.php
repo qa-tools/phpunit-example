@@ -8,7 +8,7 @@ use QATools\QATools\PageObject\Element\WebElement;
 use QATools\QATools\PageObject\Element\WebElementCollection;
 
 /**
- * @page-url('/PageObject/')
+ * @page-url('/')
  */
 class HomePage extends Page {
 
@@ -22,7 +22,7 @@ class HomePage extends Page {
 	/**
 	 *
 	 * @var WebElement
-	 * @find-by('css' => 'select[name="curr_iso"]')
+	 * @find-by('css' => 'select[name="currency"]')
 	 */
 	protected $selectByTagName;
 

@@ -10,14 +10,14 @@ use QATools\QATools\HtmlElements\Element\Button;
 use QATools\QATools\HtmlElements\Element\RadioGroup;
 
 /**
- * @page-url('/HtmlElements/')
+ * @page-url('/')
  */
 class HomePage extends TypifiedPage {
 
 	/**
 	 *
 	 * @var WebElement
-	 * @find-by('css' => 'select[name="curr_iso"]')
+	 * @find-by('css' => 'select[name="currency"]')
 	 */
 	protected $currencyDropdown;
 

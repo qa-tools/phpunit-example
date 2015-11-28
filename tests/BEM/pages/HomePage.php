@@ -7,7 +7,7 @@ use QATools\QATools\BEM\BEMPage;
 use QATools\QATools\BEM\Element\Element;
 
 /**
- * @page-url('/BEM/')
+ * @page-url('/')
  */
 class HomePage extends BEMPage {
 

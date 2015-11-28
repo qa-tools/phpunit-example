@@ -1,21 +1,46 @@
 {% extends "designs/default_design.twig" %}
 
-{% block page_title %}QA-Tools Example Application{% endblock %}
+{% block page_title %}QA-Tools Showcase App{% endblock %}
 
 {% block content %}
 	<div class="row">
-		<div class="large-12 columns">
-			<ul>
-				<li>
-					<a href="{{ path('PageObject.index') }}">PageObject Example</a>
-				</li>
-				<li>
-					<a href="{{ path('HtmlElements.index') }}">HtmlElements Example</a>
-				</li>
-				<li>
-					<a href="{{ path('BEM.index') }}">BEM Example</a>
-				</li>
-			</ul>
+		<div class="large-4 columns b-sidebar" id="block-sidebar">
+			<div id="login-sidebox" class="b-login_location_sidebar panel">
+				{% if logged_in %}
+					<a href="{{ path('index', {logout: 1}) }}">Logout</a>
+				{% else %}
+					<form method="post">
+						{% if login_error|default(false) == true %}
+							<small class="field-error b-login__error-msg error">Invalid username or password</small>
+						{% endif %}
+
+						<label>
+							Username:
+							<input type="text" class="b-login__input-username" name="u.login-sidebox[-2][UserLogin]" value="{{ form_data.login_sidebox.UserLogin|default('') }}"/>
+						</label>
+
+						<label>
+							Password:
+							<input type="password" class="b-login__input-password_color_red" name="u.login-sidebox[-2][UserPassword]" value="{{ form_data.login_sidebox.UserPassword|default('') }}"/>
+						</label>
+
+						<input type="submit" class="b-login__btn-login small button" name="events[u.login-sidebox][OnLogin]" value="Login"/>
+						<input type="hidden" name="success_url" value="{{ path('index') }}"/>
+
+						or <a href="{{ path('register') }}">Register</a>
+					</form>
+				{% endif %}
+			</div>
+		</div>
+
+		<div class="large-8 columns">
+			<label>Rating</label>
+
+			<input type="radio" name="rating" value="1" id="rating_1"/><label for="rating_1">One</label>
+			<input type="radio" name="rating" value="2" id="rating_2"/><label for="rating_2">Two</label>
+			<input type="radio" name="rating" value="3" id="rating_3"/><label for="rating_3">Three</label>
+			<input type="radio" name="rating" value="4" id="rating_4"/><label for="rating_4">Four</label>
+			<input type="radio" name="rating" value="5" id="rating_5"/><label for="rating_5">Five</label>
 		</div>
 	</div>
 {% endblock %}

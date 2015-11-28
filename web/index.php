@@ -26,19 +26,12 @@ $app->register(new UrlGeneratorServiceProvider());
 $app->register(new SessionServiceProvider());
 
 // Define routes.
-$app->get('/', function () use ($app) {
-	return $app['twig']->render('index.twig');
-})->bind('index');
-
-$sub_routes = array(
-	'/PageObject/' => 'PageObject/index',
-	'/PageObject/register/' => 'PageObject/register',
-	'/HtmlElements/' => 'HtmlElements/index',
-	'/HtmlElements/register/' => 'HtmlElements/register',
-	'/BEM/' => 'BEM/index',
+$routes = array(
+	'/' => 'index',
+	'/register/' => 'register',
 );
 
-foreach ( $sub_routes as $path => $template ) {
+foreach ( $routes as $path => $template ) {
 	$app->match($path, function () use ($app, $template) {
 		/** @var Request $request */
 		$request = $app['request'];
@@ -67,7 +60,7 @@ foreach ( $sub_routes as $path => $template ) {
 				$form_data = $form_data[-2];
 				$template_params['form_data']['login_sidebox'] = $form_data;
 
-				if ( $form_data['UserLogin'] === 'success-user' && $form_data['UserPassword'] === 'success-password' ) {
+				if ( $form_data['UserLogin'] === 'username' && $form_data['UserPassword'] === 'password' ) {
 					$app['session']->set('logged_in', true);
 
 					return $app->redirect($request->request->get('success_url'));

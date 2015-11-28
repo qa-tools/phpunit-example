@@ -14,7 +14,41 @@
 			</div>
 		</div>
 
-		{% block content %}{% endblock %}
+		<div class="row">
+			<div class="large-12 columns header b-header">
+				<div class="row">
+					<div class="large-8 columns">
+						&nbsp;
+					</div>
+
+					<div class="large-2 columns">
+						<label>
+							Language:
+							<select name="language" class="b-header__language">
+								<option value="1">English</option>
+								<option value="2">Russian</option>
+							</select>
+						</label>
+					</div>
+
+					<div class="large-2 columns">
+						<label>
+							Currency:
+							<select name="currency" class="b-header__currency">
+								<option value="USD">USD</option>
+								<option value="EUR">EUR</option>
+							</select>
+						</label>
+					</div>
+				</div>
+
+				<div class="row">
+					<hr/>
+				</div>
+			</div>
+
+			{% block content %}{% endblock %}
+		</div>
 
 		<script src="{{ app.asset_path }}/js/vendor/jquery.js"></script>
 		<script src="{{ app.asset_path }}/js/foundation.min.js"></script>

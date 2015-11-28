@@ -1,10 +1,10 @@
-{% extends "HtmlElements/designs/inside_design.twig" %}
+{% extends "designs/default_design.twig" %}
 
 {% block page_title %}
-	<a href="{{ url('HtmlElements.index') }}">HtmlElements Example</a> / Registration
+	<a href="{{ path('index') }}">QA-Tools Showcase App</a> / Registration
 {% endblock %}
 
-{% block inside_content %}
+{% block content %}
 	<form method="post">
 		<div class="large-5 columns">
 			{% if register_errors|default('') %}
@@ -78,7 +78,7 @@
 			<div class="row">
 				<div class="large-12 columns">
 					<input type="submit" class="button small" name="events[u.register][OnRegister]" value="Register"/>
-					<input type="hidden" name="success_url" value="{{ url('HtmlElements.index') }}"/>
+					<input type="hidden" name="success_url" value="{{ path('index') }}"/>
 				</div>
 			</div>
 		</div>
