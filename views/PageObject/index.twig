@@ -1,29 +1,40 @@
 {% extends "PageObject/designs/inside_design.twig" %}
 
-{% block page_title %}PageObject Example{% endblock %}
+{% block page_title %}PageObject Example / Homepage{% endblock %}
 
 {% block inside_content %}
-	<div class="large-8 columns header">
-		<div class="row">
-			<div class="large-4 columns">
-				&nbsp;
-			</div>
+	<div class="row">
+		<div class="large-4 columns" id="block-sidebar">
+			<div id="login-sidebox" class="panel">
+				{% if logged_in %}
+					<a href="{{ url('PageObject.index', {logout: 1}) }}">Logout</a>
+				{% else %}
+					<form method="post">
+						{% if login_error|default(false) == true %}
+							<small class="field-error error">Invalid username or password</small>
+						{% endif %}
 
-			<div class="large-4 columns">
-				<label>Language:</label>
-				<select name="language">
-					<option value="1">English</option>
-					<option value="2">Russian</option>
-				</select>
-			</div>
+						<label>
+							Username:
+							<input type="text" name="u.login-sidebox[-2][UserLogin]" value="{{ form_data.login_sidebox.UserLogin|default('') }}"/>
+						</label>
 
-			<div class="large-4 columns">
-				<label>Currency:</label>
-				<select name="curr_iso">
-					<option value="USD">USD</option>
-					<option value="EUR">EUR</option>
-				</select>
+						<label>
+							Password:
+							<input type="password" name="u.login-sidebox[-2][UserPassword]" value="{{ form_data.login_sidebox.UserPassword|default('') }}"/>
+						</label>
+
+						<input type="submit" class="small button" name="events[u.login-sidebox][OnLogin]" value="Login"/>
+						<input type="hidden" name="success_url" value="{{ url('PageObject.index') }}"/>
+
+						or <a href="{{ path('PageObject.register') }}">Register</a>
+					</form>
+				{% endif %}
 			</div>
+		</div>
+
+		<div class="large-8 columns">
+			inside content
 		</div>
 	</div>
 {% endblock %}

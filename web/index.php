@@ -1,6 +1,7 @@
 <?php
 
 use Silex\Application;
+use Silex\Provider\SessionServiceProvider;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\UrlGeneratorServiceProvider;
 use Symfony\Component\HttpFoundation\Request;
@@ -22,36 +23,94 @@ $app->register(new TwigServiceProvider(), array(
 	'twig.path' => dirname(__DIR__) . '/views',
 ));
 $app->register(new UrlGeneratorServiceProvider());
-
+$app->register(new SessionServiceProvider());
 
 // Define routes.
 $app->get('/', function () use ($app) {
 	return $app['twig']->render('index.twig');
 })->bind('index');
 
-$app->get('/PageObject/', function () use ($app) {
-	return $app['twig']->render('PageObject/index.twig');
-})->bind('PageObject.index');
+$sub_routes = array(
+	'/PageObject/' => 'PageObject/index',
+	'/PageObject/register/' => 'PageObject/register',
+	'/HtmlElements/' => 'HtmlElements/index',
+	'/HtmlElements/register/' => 'HtmlElements/register',
+	'/BEM/' => 'BEM/index',
+);
 
-$app->post('/PageObject/', function () use ($app) {
-	return $app['twig']->render('PageObject/index.twig', array('login_error' => 1));
-});
+foreach ( $sub_routes as $path => $template ) {
+	$app->match($path, function () use ($app, $template) {
+		/** @var Request $request */
+		$request = $app['request'];
+		$template_params = array(
+			'form_data' => array(
+				'login' => array(),
+				'register' => array(),
+			),
+			'logged_in' => $app['session']->get('logged_in'),
+		);
 
-$app->get('/HtmlElements/', function () use ($app) {
-	return $app['twig']->render('HtmlElements/index.twig');
-})->bind('HtmlElements.index');
+		if ( $request->getMethod() === 'GET' && $request->query->get('logout') ) {
+			$app['session']->set('logged_in', false);
 
-$app->post('/HtmlElements/', function () use ($app) {
-	return $app['twig']->render('HtmlElements/index.twig', array('login_error' => 1));
-});
+			list($request_uri, ) = explode('?', $request->getRequestUri(), 2);
 
-$app->get('/BEM/', function () use ($app) {
-	return $app['twig']->render('BEM/index.twig');
-})->bind('BEM.index');
+			return $app->redirect($request_uri);
+		}
 
-$app->post('/BEM/', function () use ($app) {
-	return $app['twig']->render('BEM/index.twig', array('login_error' => 1));
-});
+		if ( $request->getMethod() === 'POST' ) {
+			$events = $request->request->get('events', array());
+
+			// Process "Login Sidebox" form.
+			if ( is_array($events) && array_key_exists('u.login-sidebox', $events) ) {
+				$form_data = $request->request->get('u_login-sidebox');
+				$form_data = $form_data[-2];
+				$template_params['form_data']['login_sidebox'] = $form_data;
+
+				if ( $form_data['UserLogin'] === 'success-user' && $form_data['UserPassword'] === 'success-password' ) {
+					$app['session']->set('logged_in', true);
+
+					return $app->redirect($request->request->get('success_url'));
+				}
+				else {
+					$template_params['login_error'] = 1;
+				}
+			}
+
+			// Process "Registration" form.
+			if ( is_array($events) && array_key_exists('u.register', $events) ) {
+				$form_data = $request->request->get('u_register');
+				$form_data = $form_data[-2];
+				$template_params['form_data']['register'] = $form_data;
+
+				$errors = array();
+				$required_fields = array('Username', 'Password', 'VerifyPassword');
+
+				foreach ( $required_fields as $required_field ) {
+					if ( !strlen($form_data[$required_field]) ) {
+						$errors[$required_field] = 'Field is required.';
+					}
+				}
+
+				if ( strlen($form_data['Password'])
+					&& strlen($form_data['VerifyPassword'])
+					&& $form_data['Password'] !== $form_data['VerifyPassword']
+				) {
+					$errors['VerifyPassword'] = 'The value doesn\'t match one in "Password" field.';
+				}
+
+				if ( $errors ) {
+					$template_params['register_errors'] = $errors;
+				}
+				else {
+					return $app->redirect($request->request->get('success_url'));
+				}
+			}
+		}
+
+		return $app['twig']->render($template . '.twig', $template_params);
+	})->bind(str_replace('/', '.', $template));
+}
 
 // Run the app.
 $app->run();

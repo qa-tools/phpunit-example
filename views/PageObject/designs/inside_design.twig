@@ -2,21 +2,35 @@
 
 {% block content %}
 	<div class="row">
-		<div class="large-4 columns" id="block-sidebar">
-			<div id="login-sidebox" class="panel">
-				<form method="post">
-					{% if login_error|default(false) == true %}
-						<small class="field-error error">Invalid username or password</small>
-					{% endif %}
+		<div class="large-12 columns header">
+			<div class="row">
+				<div class="large-8 columns">
+					&nbsp;
+				</div>
 
-					<label>E-mail or Username:</label>
-					<input type="text" name="u.login-sidebox[-2][UserLogin]" value=""/>
+				<div class="large-2 columns">
+					<label>
+						Language:
+						<select name="language">
+							<option value="1">English</option>
+							<option value="2">Russian</option>
+						</select>
+					</label>
+				</div>
 
-					<label>Password:</label>
-					<input type="password" name="u.login-sidebox[-2][UserPassword]" value=""/>
+				<div class="large-2 columns">
+					<label>
+						Currency:
+						<select name="curr_iso">
+							<option value="USD">USD</option>
+							<option value="EUR">EUR</option>
+						</select>
+					</label>
+				</div>
+			</div>
 
-					<input type="submit" class="small button" name="events[u.login-sidebox][OnLogin]" value="Login"/>
-				</form>
+			<div class="row">
+				<hr/>
 			</div>
 		</div>
 
