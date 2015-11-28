@@ -15,7 +15,7 @@ class DemoTest extends AbstractQAToolsTestCase
 
 		$homePage->setUsername('example user');
 
-		$homePage->changeCurrency('EUR');
+		$homePage->setCurrency('EUR');
 
 		foreach ( $homePage->getSelectCollection() as $select ) {
 			$select->selectOption('');

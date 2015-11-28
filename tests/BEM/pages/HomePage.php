@@ -3,13 +3,13 @@
 namespace tests\BEM\pages;
 
 
-use QATools\QATools\BEM\BEMPage;
-use QATools\QATools\BEM\Element\Element;
+use tests\BEM\designs\DefaultDesign;
+use tests\BEM\elements\LoginSidebox;
 
 /**
  * @page-url('/')
  */
-class HomePage extends BEMPage {
+class HomePage extends DefaultDesign {
 
 	/**
 	 * Login Sidebox

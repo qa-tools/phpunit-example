@@ -3,31 +3,17 @@
 namespace tests\HtmlElements\pages;
 
 
-use QATools\QATools\HtmlElements\TypifiedPage;
 use QATools\QATools\PageObject\Element\WebElement;
-use QATools\QATools\HtmlElements\Element\Select;
 use QATools\QATools\HtmlElements\Element\Button;
 use QATools\QATools\HtmlElements\Element\RadioGroup;
+use tests\HtmlElements\designs\DefaultDesign;
+use tests\HtmlElements\elements\LoginSidebox;
+use tests\HtmlElements\elements\Sidebar;
 
 /**
  * @page-url('/')
  */
-class HomePage extends TypifiedPage {
-
-	/**
-	 *
-	 * @var WebElement
-	 * @find-by('css' => 'select[name="currency"]')
-	 */
-	protected $currencyDropdown;
-
-	/**
-	 *
-	 * @var Select
-	 * @find-by('css' => 'select[name="language"]')
-	 * @element-name('Custom Element Name')
-	 */
-	protected $languageDropdown;
+class HomePage extends DefaultDesign {
 
 	/**
 	 *
@@ -80,30 +66,6 @@ class HomePage extends TypifiedPage {
 	 * @var string
 	 */
 	protected $myTest = '';
-
-	/**
-	 * Changes currency.
-	 *
-	 * @param string $currency_code Currency code.
-	 *
-	 * @return void
-	 */
-	public function changeCurrency($currency_code)
-	{
-		$this->currencyDropdown->setValue($currency_code);
-	}
-
-	/**
-	 * Changes language.
-	 *
-	 * @param string $language_title Language title.
-	 *
-	 * @return void
-	 */
-	public function changeLanguage($language_title)
-	{
-		$this->languageDropdown->selectByText($language_title);
-	}
 
 	/**
 	 * Returns radio button collection.

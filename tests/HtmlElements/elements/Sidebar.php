@@ -1,6 +1,6 @@
 <?php
 
-namespace tests\HtmlElements\pages;
+namespace tests\HtmlElements\elements;
 
 
 use QATools\QATools\HtmlElements\Element\AbstractElementContainer;

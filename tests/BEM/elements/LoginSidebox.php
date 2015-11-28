@@ -1,6 +1,6 @@
 <?php
 
-namespace tests\BEM\pages;
+namespace tests\BEM\elements;
 
 
 use QATools\QATools\BEM\Element\Block;
@@ -40,7 +40,8 @@ class LoginSidebox extends Block {
 	 *
 	 * @param string $username
 	 * @param string $password
-	 * @return LoginSidebox
+	 *
+	 * @return self
 	 */
 	public function login($username, $password)
 	{

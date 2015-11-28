@@ -3,14 +3,14 @@
 namespace tests\PageObject\pages;
 
 
-use QATools\QATools\PageObject\Page;
 use QATools\QATools\PageObject\Element\WebElement;
 use QATools\QATools\PageObject\Element\WebElementCollection;
+use tests\PageObject\designs\DefaultDesign;
 
 /**
  * @page-url('/')
  */
-class HomePage extends Page {
+class HomePage extends DefaultDesign {
 
 	/**
 	 *
@@ -18,13 +18,6 @@ class HomePage extends Page {
 	 * @find-by('name' => 'u.login-sidebox[-2][UserLogin]')
 	 */
 	protected $inputByName;
-
-	/**
-	 *
-	 * @var WebElement
-	 * @find-by('css' => 'select[name="currency"]')
-	 */
-	protected $selectByTagName;
 
 	/**
 	 *
@@ -36,18 +29,6 @@ class HomePage extends Page {
 	public function setUsername($username)
 	{
 		$this->inputByName->setValue($username);
-	}
-
-	/**
-	 * Changes currency.
-	 *
-	 * @param string $currency_code Currency code.
-	 *
-	 * @return void
-	 */
-	public function changeCurrency($currency_code)
-	{
-		$this->selectByTagName->setValue($currency_code);
 	}
 
 	/**

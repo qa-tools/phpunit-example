@@ -1,6 +1,6 @@
 <?php
 
-namespace tests\HtmlElements\pages;
+namespace tests\HtmlElements\elements;
 
 
 use QATools\QATools\HtmlElements\Element\AbstractElementContainer;
@@ -42,7 +42,8 @@ class LoginSidebox extends AbstractElementContainer {
 	 *
 	 * @param string $username
 	 * @param string $password
-	 * @return LoginSidebox
+	 *
+	 * @return self
 	 */
 	public function login($username, $password)
 	{

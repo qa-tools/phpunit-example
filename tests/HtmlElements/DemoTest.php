@@ -14,9 +14,9 @@ class DemoTest extends AbstractQAToolsTestCase
 		$homePage = new HomePage($this->pageFactory);
 		$homePage->open();
 
-		$homePage->changeCurrency('EUR');
+		$homePage->setCurrency('EUR');
 
-		$homePage->changeLanguage('Russian');
+		$homePage->setLanguage('Russian');
 
 		foreach ( $homePage->getRadioGroup() as $radioButton ) {
 			if ( $radioButton->isSelected() ) {

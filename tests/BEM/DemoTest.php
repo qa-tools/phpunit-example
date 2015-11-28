@@ -13,6 +13,8 @@ class DemoTest extends AbstractQAToolsTestCase
 		$homePage = new HomePage($this->pageFactory);
 		$homePage->open();
 
+		$homePage->setCurrency('EUR');
+
 		$errorMessage = $homePage->loginViaSandbox('user-a', 'password-a');
 	}
 
