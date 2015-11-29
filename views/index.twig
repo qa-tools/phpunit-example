@@ -11,7 +11,7 @@
 				{% else %}
 					<form method="post">
 						{% if login_error|default(false) == true %}
-							<small class="field-error b-login__error-msg error">Invalid username or password</small>
+							<small class="login-error b-login__error-msg error">Invalid username or password</small>
 						{% endif %}
 
 						<label>

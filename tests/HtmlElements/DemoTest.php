@@ -9,6 +9,26 @@ use tests\HtmlElements\pages\HomePage;
 class DemoTest extends AbstractQAToolsTestCase
 {
 
+	public function testSuccessfulLogin()
+	{
+		$homePage = new HomePage($this->pageFactory);
+		$homePage->open();
+
+		$homePage->loginSidebox->login('username', 'password');
+
+		$this->assertContains('Logout', $homePage->loginSidebox->getText());
+	}
+
+	public function testFailedLogin()
+	{
+		$homePage = new HomePage($this->pageFactory);
+		$homePage->open();
+
+		$homePage->loginSidebox->login('username', 'invalid-password');
+
+		$this->assertEquals('Invalid username or password', $homePage->loginSidebox->getErrorMessageText());
+	}
+
 	public function testExample()
 	{
 		$homePage = new HomePage($this->pageFactory);

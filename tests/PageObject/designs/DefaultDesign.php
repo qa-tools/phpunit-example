@@ -23,25 +23,25 @@ abstract class DefaultDesign extends Page {
 	/**
 	 * Sets language.
 	 *
-	 * @param string $language Language.
+	 * @param string $language_id Language ID.
 	 *
 	 * @return void
 	 */
-	public function setLanguage($language)
+	public function setLanguageId($language_id)
 	{
-		$this->language->setValue($language);
+		$this->language->setValue($language_id);
 	}
 
 	/**
 	 * Sets currency.
 	 *
-	 * @param string $currency Currency.
+	 * @param string $currency_iso Currency ISO.
 	 *
 	 * @return void
 	 */
-	public function setCurrency($currency)
+	public function setCurrencyIso($currency_iso)
 	{
-		$this->currency->setValue($currency);
+		$this->currency->setValue($currency_iso);
 	}
 
 }

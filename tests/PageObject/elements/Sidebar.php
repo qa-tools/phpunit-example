@@ -21,13 +21,14 @@ class Sidebar extends AbstractElementContainer {
 	/**
 	 * Tries to login a user
 	 *
-	 * @param string $username
-	 * @param string $password
+	 * @param string $username Username.
+	 * @param string $password Password.
+	 *
 	 * @return string
 	 */
 	public function login($username, $password)
 	{
-		return $this->loginSidebox->login($username, $password)->getLoginErrorMessage();
+		return $this->loginSidebox->login($username, $password)->getErrorMessageText();
 	}
 
 }

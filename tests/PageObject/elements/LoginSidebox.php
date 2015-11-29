@@ -24,19 +24,19 @@ class LoginSidebox extends AbstractElementContainer {
 	 * @var WebElement
 	 * @find-by('name' => 'events[u.login-sidebox][OnLogin]')
 	 */
-	protected $loginButton;
+	protected $submitButton;
 
 	/**
 	 * @var WebElement
-	 * @find-by('css' => '.field-error')
+	 * @find-by('css' => '.login-error')
 	 */
-	protected $loginErrorMessage;
+	protected $errorMessage;
 
 	/**
-	 * Tries to login a user
+	 * Tries to login a user.
 	 *
-	 * @param string $username
-	 * @param string $password
+	 * @param string $username Username.
+	 * @param string $password Password.
 	 *
 	 * @return self
 	 */
@@ -44,19 +44,19 @@ class LoginSidebox extends AbstractElementContainer {
 	{
 		$this->username->setValue($username);
 		$this->password->setValue($password);
-		$this->loginButton->click();
+		$this->submitButton->click();
 
 		return $this;
 	}
 
 	/**
-	 * Returns error message after login
+	 * Returns error message after login (if any).
 	 *
 	 * @return string
 	 */
-	public function getLoginErrorMessage()
+	public function getErrorMessageText()
 	{
-		return $this->loginErrorMessage->getText();
+		return $this->errorMessage->getText();
 	}
 
 }
