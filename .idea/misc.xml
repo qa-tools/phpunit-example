@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
+    <option name="myActivateViewOnRun" value="false" />
+  </component>
+  <component name="JSLintConfiguration">
+    <option browser="true" />
+    <option devel="true" />
+    <option eqeq="true" />
+    <option indent="4" />
+    <option maxerr="50" />
+    <option nomen="true" />
+    <option plusplus="true" />
+    <option undef="true" />
+    <option white="true" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <last-edited>PHPCS</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+          <order>
+            <scope name="PHPCS" />
+          </order>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

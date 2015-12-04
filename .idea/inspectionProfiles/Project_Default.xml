@@ -1,0 +1,11 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <option name="myLocal" value="true" />
+    <inspection_tool class="InconsistentLineSeparators" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PhpDocMissingThrowsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="IGNORE_RUNTIME_EXCEPTIONS" value="false" />
+      <option name="IGNORE_LOGIC_EXCEPTIONS" value="false" />
+    </inspection_tool>
+  </profile>
+</component>
