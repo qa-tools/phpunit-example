@@ -105,5 +105,11 @@ foreach ( $routes as $path => $template ) {
 	})->bind(str_replace('/', '.', $template));
 }
 
+$app->get('/category/{category_name}/', function ($category_name) use ($app) {
+	return $app['twig']->render('category.twig', array(
+		'category_name' => $category_name,
+	));
+});
+
 // Run the app.
 $app->run();

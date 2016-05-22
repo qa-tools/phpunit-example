@@ -3,6 +3,7 @@
 namespace tests\PageObject;
 
 
+use tests\PageObject\pages\CategoryPage;
 use tests\PageObject\pages\HomePage;
 
 class DemoTest extends AbstractQAToolsTestCase
@@ -64,4 +65,14 @@ class DemoTest extends AbstractQAToolsTestCase
 		}
 	}
 
+	/**
+	 * Urls unmasking would work since QA-Tools 1.2.0 only.
+	 */
+	public function testUrlUnmasking()
+	{
+		$page = new CategoryPage($this->pageFactory);
+		$page->open(array('category_name' => 'example category'));
+
+		$this->assertContains('example category', $page->getContent());
+	}
 }
