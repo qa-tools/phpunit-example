@@ -57,7 +57,7 @@ class LoginSidebox extends Block {
 	 *
 	 * @return string
 	 */
-	public function getLoginErrorMessage()
+	public function getErrorMessageText()
 	{
 		return $this->loginErrorMessage->getWrappedElement()->getText();
 	}

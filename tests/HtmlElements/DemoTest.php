@@ -16,7 +16,7 @@ class DemoTest extends AbstractQAToolsTestCase
 
 		$homePage->loginSidebox->login('username', 'password');
 
-		$this->assertContains('Logout', $homePage->loginSidebox->getText());
+		$this->assertContains('Logout', $homePage->loginSidebox->getWrappedElement()->getText());
 	}
 
 	public function testFailedLogin()

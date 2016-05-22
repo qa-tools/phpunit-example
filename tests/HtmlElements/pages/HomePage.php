@@ -51,7 +51,7 @@ class HomePage extends DefaultDesign {
 	 * @var LoginSidebox
 	 * @find-by('id' => 'login-sidebox')
 	 */
-	protected $loginSidebox;
+	public $loginSidebox;
 
 	/**
 	 * Sidebar
@@ -115,7 +115,7 @@ class HomePage extends DefaultDesign {
 	 */
 	public function loginViaSidebox($username, $password)
 	{
-		return $this->loginSidebox->login($username, $password)->getLoginErrorMessage();
+		return $this->loginSidebox->login($username, $password)->getErrorMessageText();
 	}
 
 	/**

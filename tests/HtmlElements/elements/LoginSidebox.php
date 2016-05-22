@@ -33,7 +33,7 @@ class LoginSidebox extends AbstractElementContainer {
 
 	/**
 	 * @var TextBlock
-	 * @find-by('css' => '.field-error')
+	 * @find-by('css' => '.login-error')
 	 */
 	protected $loginErrorMessage;
 
@@ -59,7 +59,7 @@ class LoginSidebox extends AbstractElementContainer {
 	 *
 	 * @return string
 	 */
-	public function getLoginErrorMessage()
+	public function getErrorMessageText()
 	{
 		return $this->loginErrorMessage->getText();
 	}

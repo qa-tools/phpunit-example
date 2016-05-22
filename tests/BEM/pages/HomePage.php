@@ -36,7 +36,7 @@ class HomePage extends DefaultDesign {
 	 */
 	public function loginViaSandbox($username, $password)
 	{
-		return $this->loginSidebox->login($username, $password)->getLoginErrorMessage();
+		return $this->loginSidebox->login($username, $password)->getErrorMessageText();
 	}
 
 }
