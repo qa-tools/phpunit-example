@@ -9,7 +9,7 @@ Feel free to ask any questions and share your experiences in the [Chat Room](htt
 ## Usage
 
 1. if "Selenium Standalone Server" isn't running do this to start it:
- * go to folder, where it was was downloaded previously (see [Installation](#installation))
+ * go to folder, where it was downloaded previously (see [Installation](#installation))
  * execute this command: `java -jar selenium-server-standalone-X.Y.Z.jar` (replace `selenium-server-standalone-X.Y.Z.jar` with downloaded file name)
 2. go to location of cloned repository
 3. execute this command to run the tests: `./vendor/bin/phpunit`
