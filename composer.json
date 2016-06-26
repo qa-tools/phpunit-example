@@ -12,14 +12,8 @@
         "behat/mink-selenium2-driver": "^1.3",
 		"qa-tools/phpunit-extension": "^1.0",
 		"qa-tools/qa-tools": "^1.0",
-		"aik099/phpunit-mink": "dev-21-remove-dependency-on-pimple as 2.1"
+		"aik099/phpunit-mink": "^2.2"
 	},
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "https://github.com/aik099/phpunit-mink"
-		}
-	],
     "license": "BSD-3-Clause",
     "authors": [
         {
